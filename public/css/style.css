@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #24252A;
+}
+header{
+    background: #0088a9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 31px 10%;
+    box-shadow: 5px 0 0 1px #ffff;
+}
+li, a{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.carro{
+    cursor: pointer;
+    width: 4%;
+    order: 2;
+}
+.link{
+    list-style: none;
+}
+.link li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.link li a{
+    transition: all 0.3s ease 0s;
+}
+.link li a:hover {
+    color: #24252A
+}
