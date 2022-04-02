@@ -1,7 +1,7 @@
 import Sequelize from 'sequelize'
 import { connection } from '../database/connection.js'
 
-export const carros = connection.define( 'carros',{
+export const carro2 = connection.define( 'carro2',{
     id:{
         type: Sequelize.INTEGER,
         allowNull: false, // não pertimite nulo

@@ -1,8 +1,8 @@
-import { carros } from "../model/carros.js"
+import { carro2} from "../model/CarrosModel.js"
 
 export const getIndex = async (req, res) =>{
     try{
-        const conect = await carros.findAll()
+        const conect = await carro2.findAll()
         res.render('index.ejs',{conect})
 
     }
