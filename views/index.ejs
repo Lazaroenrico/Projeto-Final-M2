@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css " tpye="text/css" />
+    <title>Catalogo Carro</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/css/style.css " tpye="text/css" />
-  <title>Catalogo Carro</title>
-</head>
-
-<body>
-  <%- include('./partials/header.ejs') %>
-  <% console.log(conect) %>
+  <body>
+    <%- include('./partials/header.ejs') %>
     <main>
-        
-        
+      <% conect.forEach(element=> { %>
+      <a href="/detalhe/<%= element.id %>">
+        <div class="card-main">
+          <div class="card-img">
+            <img src="<%= element.img %>" alt="<%= element.modelo %>" />
+          </div>
+            <div class="card-modelo">
+              <br />
+              <div>Modelo: <%= element.modelo %></div>
+          </div>
+          <div class="btn-delite">
+            <a class="delite" href="/excluir/<%= element.id %>">
+              <img
+                src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/344/external-delete-miscellaneous-kiranshastry-lineal-color-kiranshastry.png"
+                alt="excluir"
+              />
+            </a>
+          </div>
+        </div>
+      </a>
+      <% }) %>
     </main>
-</body>
-
+  <%- include('./partials/footer.ejs') %>
+  </body>
 </html>

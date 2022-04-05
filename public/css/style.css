@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -9,6 +9,7 @@ body{
     background-color: #24252A;
 }
 header{
+    
     background: #0088a9;
     display: flex;
     justify-content: space-between;
@@ -23,7 +24,6 @@ li, a{
     color: #edf0f1;
     text-decoration: none;
 }
-
 .carro{
     cursor: pointer;
     width: 4%;
@@ -41,4 +41,54 @@ li, a{
 }
 .link li a:hover {
     color: #24252A
+}
+
+/*----------------------
+          INDEX
+-------------------------
+-------------------------
+*/
+main{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+}
+div.card-main{  
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    font-family: 'Roboto', sans-serif;  
+    background-color: #0088a9;
+    width: 250px;
+    height: 350px;
+    border: 1px solid #ffff;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+div.card-img{
+    display: flex;  
+    justify-content: center;
+    height: 80%;
+    width: 100%;   
+    padding: 10px;
+}
+div.card-img img{
+    width: 100%;
+}
+main .card-text-style{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+main a.delite img{
+    width: 50px;
+}
+div.btn-delite {
+    display:flex;
+    justify-content: center;
 }

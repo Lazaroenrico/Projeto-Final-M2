@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/detalhe.css" tpye="text/css">
-    <title>Detalhes</title>
+    <link rel="stylesheet" href="/css/detalhe.css " tpye="text/css" />
+    <title>Detalhe</title>
 </head>
+
 <body>
-    <% conect.forEach(element=> { %>
-        <%-  %> 
-        <% }) %>
-    <h1>Detalhes</h1>
+  <%- include('./partials/header.ejs') %>
+    <main>
+        <img src="<%= carro.img %>" alt="<%= carro.modelo %>">
+            <table>
+                <thead>
+                    <tr>Ficha Técnica</tr>
+                </thead>
+                <tr>
+                    <td>Modelo</td>
+                    <td><%= carro.modelo %></td>
+                </tr>
+                <tr>
+                    <td>Fabricação</td>
+                    <td>  <%= carro.ano %></td>
+                </tr>
+                <tr>
+                    <td>Tanque</td>
+                    <td><%= carro.tanque %> L</td>
+                </tr>
+                <tr>
+                    <td>Autonomia</td>
+                    <td><%= carro.autonomia %></td>
+                </tr>
+                <tr>
+                    <td>Fabricante</td>
+                    <td><%= carro.fabricante %></td>
+                </tr>
+            </table>
+    </main>
+
 </body>
+
 </html>

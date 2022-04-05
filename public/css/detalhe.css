@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  background:#24252A;
+}
+header{
+    
+    background: #0088a9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 31px 10%;
+    box-shadow: 5px 0 0 1px #ffff;
+}
+li, a{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+.carro{
+    cursor: pointer;
+    width: 4%;
+    order: 2;
+}
+.link{
+    list-style: none;
+}
+.link li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.link li a{
+    transition: all 0.3s ease 0s;
+}
+.link li a:hover {
+    color: #24252A
+}
+
+/*--------CADASTRO--------*/
+main{
+    margin-top: 30px;
+    color: #edf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+td{
+    border: 1px solid #fff;
+ }
+ tr:nth-child(odd){
+     background: #0088a9;
+ }
+
+ /* ---- Formulário -----*/
+ 
+ form{
+    font-family: 'Roboto', sans-serif;          
+    margin-top: 20px;
+    display:flex ;
+    flex-direction: column;
+    padding: 10px;
+    width: 300px;
+    height: 350px;
+    box-shadow: 0 0 0 1px #ffff;
+ }
+
+legend {
+    text-align: center  ;
+    color: #469bd2;
+}
+
+fieldset{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border: none;
+    padding: 10px;
+}
+fieldset input{
+    display: flex;
+    flex-wrap: wrap;
+}
+fieldset label{
+    display: flex;
+    padding-left: 10px;
+    order: 2;
+}
+#bn-container{
+    display:flex;   
+    justify-content: center;
+}
+button{
+    background-color: #0088a9;
+    color: white;
+    margin-top: 8px;
+    box-shadow: 0 0 0 1px #ffff;
+}
+button:hover{
+    background-color: #24252A;
+    color: white;
+}
