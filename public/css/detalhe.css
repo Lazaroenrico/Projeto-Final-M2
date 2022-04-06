@@ -44,7 +44,7 @@ li, a{
     color: #24252A
 }
 
-/*--------CADASTRO--------*/
+/*--------Detalhes--------*/
 main{
     margin-top: 30px;
     color: #edf0f1;
@@ -53,11 +53,15 @@ main{
     align-items: center;
     flex-direction: column;
 }
-td{
-    border: 1px solid #fff;
- }
+table{
+    margin-top: 8px
+}
  tr:nth-child(odd){
      background: #0088a9;
+ }
+ td{
+    border: 1px solid #fff;
+    padding: 5px;
  }
 
  /* ---- Formulário -----*/

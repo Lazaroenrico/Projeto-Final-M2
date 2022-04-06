@@ -10,35 +10,35 @@
   <body>
     <%- include('./partials/header.ejs') %>
     <main>
-      <form action="/cadastro" method="post">
+      <form action="/editar/<%= carro.id %>" method="post">
         <legend>Editar</legend>
         <fieldset>
-          <input type="text" name="img" />
-          <label for="img">Img</label>
+          <input type="text" name="img" value="<%= carro.img %>" />
+          <label for="img">Imagem</label>
         </fieldset>
 
         <fieldset>
-          <input type="text" name="modelo" />
+          <input type="text" name="modelo" value="<%= carro.modelo %>" />
           <label for="modelo"><b>Modelo</b></label>
         </fieldset>
 
         <fieldset>
-          <input type="number" name="ano" />
+          <input type="number" name="ano" value="<%= carro.ano %>"/>
           <label for="ano"><b>Ano</b></label>
         </fieldset>
 
         <fieldset>
-          <input type="text" name="tanque" />
+          <input type="text" name="tanque" value="<%= carro.tanque %>"/>
           <label for="tanque"><b>Tanque</b></label>
         </fieldset>
 
         <fieldset>
-          <input type="text" name="autonomia" />
+          <input type="text" name="autonomia" value="<%= carro.autonomia %>"/>
           <label for="autonomia"><b>Autonomia</b></label>
         </fieldset>
 
         <fieldset>
-          <input type="text" name="fabricante" />
+          <input type="text" name="fabricante" value="<%= carro.fabricante %>"/>
           <label for="fabricante"><b>Fabricante</b></label>
         </fieldset>
 

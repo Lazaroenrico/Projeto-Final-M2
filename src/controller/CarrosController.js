@@ -57,6 +57,30 @@ export const postCadastro = async (req,res)=>{
     
 }
 
-export const getEditar = (req,res)=>{
-    res.status(200).render('editar.ejs')
+export const getEditar = async (req,res)=>{
+    const carro = await carros.findByPk(req.params.id)
+    res.status(200).render('editar.ejs',{carro})
+}
+
+export const postEditar = async (req,res)=>{
+    const {img, modelo, ano, tanque, autonomia, fabricante } = req.body
+
+    try{
+        await carros.update({
+            img: img, 
+            modelo: modelo,
+            ano: ano,
+            tanque: tanque,
+            autonomia: autonomia,
+            fabricante: fabricante },
+            {
+                where: {
+                    id: req.params.id
+                }
+            } )
+        res.redirect('/')
+    }
+    catch(err){
+        res.status(500).send(err.message)
+    }
 }

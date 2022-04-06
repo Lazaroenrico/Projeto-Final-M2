@@ -2,9 +2,10 @@ import express from 'express'
 import { getIndex,
     getDetalhe,
     getCadastro,
-    getExcluir,
+    getExcluir, 
     postCadastro,
     getEditar,
+    postEditar,
 } from '../controller/CarrosController.js'
 
 
@@ -17,4 +18,5 @@ routes.get('/excluir/:id', getExcluir)
 routes.get('/cadastro',getCadastro)
 routes.post('/cadastro', postCadastro)
 
-routes.get('/editar',getEditar)
+routes.get('/editar/:id',getEditar)
+routes.post('/editar/:id',postEditar)

@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css " tpye="text/css" />
-    <title>Catalogo Carro</title>
+    <title>Catálogo Automobilístico</title>
   </head>
 
   <body>
     <%- include('./partials/header.ejs') %>
+
+    <h1>Catálogo Automobilístico</h1>
     <main>
       <% conect.forEach(element=> { %>
       <a href="/detalhe/<%= element.id %>">
@@ -27,6 +29,9 @@
                 src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/344/external-delete-miscellaneous-kiranshastry-lineal-color-kiranshastry.png"
                 alt="excluir"
               />
+            </a>
+            <a class="editar" href="/editar/<%= element.id %>">
+              <img class="bnt-editar" src="https://cdn-icons.flaticon.com/png/512/1634/premium/1634406.png?token=exp=1649203963~hmac=97866fc934fd368295919a2bcd5dbb32" alt="editar">
             </a>
           </div>
         </div>

@@ -1,8 +1,11 @@
 import express from 'express'
 import { routes } from './src/routes/routes.js'
 import  path  from 'path'
+import dotenv from 'dotenv'
 
-const port = 4900
+dotenv.config()
+
+const port = process.env.PORT || 4900
 const __dirname = path.resolve(path.dirname(''))
 
 const app = express()
